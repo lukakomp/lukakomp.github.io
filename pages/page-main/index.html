@@ -1,0 +1,28 @@
+<header>
+    <div class="name-site">
+        <div class="logo"><i class="fab fa-reddit"></i></div>
+        <h1>Sarnor</h1>
+    </div>
+    <div>
+        <div class="menu-wrapper">
+            <menu ng-controller="mainMenu">
+                <li ng-repeat="k in headerMenuList" 
+                ng-click="functionClick($index)" 
+                ng-class="{'li-active':selected ==  $index}">
+                    <span> 
+                        <i class="{{k.icon}}"></i>
+                    </span>
+                    <span>{{k.name}}</span>
+                    <a href="#!/{{k.link}}"></a>
+                </li>
+            </menu>
+        </div>
+    </div>
+</header>
+
+<main>
+    <ng-view></ng-view>
+</main>
+
+<footer>footer</footer>
+
