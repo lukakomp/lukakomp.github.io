@@ -1,0 +1,155 @@
+@zindex: 1000000;
+
+@btr: rgba(0, 0, 0, .5);/*= black light trasparent =*/
+
+@wtr: rgba(255, 255, 255, .5);/*= white light trasparent =*/
+
+@tr: transparent;/*= trasparent =*/
+
+
+.text( @c: white;
+@ta: center;
+@lh: normal;
+@ls: normal;
+@fs: medium;
+@ff: "";
+@fw: normal;
+@fst: normal;
+@fk: auto;
+@fsch: normal;
+@fv: normal;
+@ws: normal;
+) {
+    word-spacing: @ws;
+    color: @c;
+    text-align: @ta;
+    line-height: @lh;
+    letter-spacing: @ls;
+    font-size: @fs;
+    font-family: @ff;
+    font-weight: @fw;
+    font-style: @fst;
+    font-kerning: @fk;
+    font-stretch: @fsch;
+    font-variant: @fv;
+}
+
+.size( @w: 100%;
+@h: 100%;
+) {
+    width: @w;
+    height: @h;
+}
+
+.size-min( @min-w: 0px;
+@min-h: 0px;
+) {
+    min-width: @min-w;
+    min-height: @min-h;
+}
+
+.size-max( @max-w: 0px;
+@max-h: 0px;
+) {
+    max-width: @max-w;
+    max-height: @max-h;
+}
+
+.position( @p: relative;
+@t: auto;
+@r: auto;
+@b: auto;
+@l: auto;
+) {
+    position: @p;
+    top: @t;
+    right: @r;
+    bottom: @b;
+    left: @l;
+}
+
+.center(@p: absolute;
+@l: 50%;
+@t: 50%;
+@x: -50%;
+@y: -50%;
+) {
+    position: @p;
+    left: @l;
+    top: @t;
+    transform: translate(@x, @y);
+}
+
+.ts( @p: all;
+@t: 0.3s;
+@e: ease;
+@d: 0s;
+) {
+    -webkit-transition: @arguments;
+    -ms-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
+}
+
+/* 
+flex-end center flex-start space-between space-around space-evenly 
+ flex-end baseline center stretch flex-start 
+stretch flex-end flex-start center space-around space-between  
+*/
+
+.flex-parent( @d: flex;
+@fd: row;
+@fw: nowrap;
+@jc: flex-start;
+@ai: center;
+@ac: center;
+) {
+    display: @d;
+    flex-wrap: @fw;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+    align-content: @ac;
+}
+
+.flex-child( @fg: 0;
+@fs: 1;
+@as: auto;
+@fb: auto;
+@o: 0;
+) {
+    flex-grow: @fg;
+    flex-shrink: @fs;
+    align-self: @as;
+    flex-basis: @fb;
+    order: @o;
+}
+
+.ns() {
+    touch-callout: none;
+    -webkit-touch-callout: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.t( 
+@b: 1px solid red;
+@p: 1px;
+@m: 1px;
+) {
+    border: @b;
+    padding: @p;
+    margin: @m;
+}
+
+/* mixins end*/
+
+/*========================*/
+.all() {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
