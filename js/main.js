@@ -5,7 +5,7 @@ app.directive('rootElement', function () {
     restrict: "ECA",
     templateUrl: './pages/page-main/index.html',
     link: function (scope, element, attr) {
-      
+
     }
   }
 });
@@ -33,20 +33,14 @@ app.controller('mainMenu', function ($scope, $location) {
     icon: 'fal fa-id-card-alt',
     link: 'contact-me'
   }];
-	
+
   //console.log("TCL: $location", $location)
-  $scope.selected = $scope.headerMenuList.map(function(e) { return e.link; }).indexOf($location.$$path.replace('/', ''));
+  $scope.selected = $scope.headerMenuList.map(function (e) { return e.link; }).indexOf($location.$$path.replace('/', ''));
   $scope.functionClick = function (index) {
     $scope.selected = index;
   }
 });
-app.controller('gtPath', function ($scope,$location) {
-  
-  $scope.clickButton = function () {
-    //console.log(this);
-    console.log("TCL: $location", $location)
-  }
-});
+
 
 
 
