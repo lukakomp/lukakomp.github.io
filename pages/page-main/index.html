@@ -1,15 +1,14 @@
 <header>
     <div class="name-site">
         <div class="logo"><i class="fab fa-reddit"></i></div>
-        <h1>Sarnor</h1>
+        <h1>Luka-Komp</h1>
     </div>
     <div>
         <div class="menu-wrapper">
             <menu ng-controller="mainMenu">
-                <li ng-repeat="k in headerMenuList" 
-                ng-click="functionClick($index)" 
-                ng-class="{'li-active':selected ==  $index}">
-                    <span> 
+                <li ng-repeat="k in headerMenuList" ng-click="functionClick($index)"
+                    ng-class="{'li-active':selected ==  $index}">
+                    <span>
                         <i class="{{k.icon}}"></i>
                     </span>
                     <span>{{k.name}}</span>
@@ -25,4 +24,3 @@
 </main>
 
 <footer>footer</footer>
-
